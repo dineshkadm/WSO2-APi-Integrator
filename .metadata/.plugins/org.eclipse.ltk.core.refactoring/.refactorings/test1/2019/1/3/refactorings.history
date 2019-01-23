@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;test1/src/main/synapse-config/api/schena/in_transform.xsl&apos; to &apos;in_transform.xslt&apos;" description="Rename resource &apos;in_transform.xsl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/synapse-config/api/schena/in_transform.xsl" name="in_transform.xslt" stamp="1548019378339" updateReferences="true"/>
+</session>

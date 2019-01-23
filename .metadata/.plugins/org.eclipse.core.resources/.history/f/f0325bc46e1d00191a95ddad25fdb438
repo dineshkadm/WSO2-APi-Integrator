@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/customers" name="CustomerAPI" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="POST" protocol="http" uri-template="/customers">
+    <inSequence>
+      <log level="full"/>
+      <xslt key="conf:/in_transform.xslt"/>
+      <property name="messageType" scope="axis2" type="STRING" value="text/xml"/>
+      <header name="Action" scope="default" value="urn:getQuote"/>
+      <enrich>
+        <source clone="true" xmlns:m0="http://services.samples" xpath="//m0:getQuote"/>
+        <target type="body"/>
+      </enrich>
+      <log level="full"/>
+      <log description="">
+        <property name="message" value="After soap call"/>
+      </log>
+      <call>
+        <endpoint>
+          <address format="soap11" trace="disable" uri="http://localhost:8080/mock1"/>
+        </endpoint>
+      </call>
+      <log level="full"/>
+      <xslt key="conf:/out_transform.xslt"/>
+      <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+      <send/>
+    </inSequence>
+    <outSequence>
+      <log description="">
+        <property name="message" value="Inside out seq"/>
+      </log>
+      <send/>
+    </outSequence>
+    <faultSequence/>
+  </resource>
+</api>

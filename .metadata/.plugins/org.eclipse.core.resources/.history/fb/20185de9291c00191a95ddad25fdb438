@@ -1,0 +1,13 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+	name="ESBDeploySample" transports="https,http" statistics="disable" trace="disable"
+	startOnLoad="true">
+	<target>
+		<outSequence>
+			<send />
+		</outSequence>
+		<endpoint
+		name="endpoint_urn_uuid_343aed16-0e8a-486d-9815-1ec74a903a10">
+		<address uri="https://localhost:9443" />
+		</endpoint>
+	</target>
+</proxy>
