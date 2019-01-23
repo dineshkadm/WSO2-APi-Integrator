@@ -1,8 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <SubmitResponseMes>
-         <ResponseCode>Sucess</ResponseCode>
-      </SubmitResponseMes>
-   </soapenv:Body>
-</soapenv:Envelope>

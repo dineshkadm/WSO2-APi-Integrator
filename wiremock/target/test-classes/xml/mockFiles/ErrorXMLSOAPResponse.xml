@@ -1,9 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://schemas.cjse.gov.uk/endpoint/types/">
-   <soapenv:Header/>
-   <soapenv:Fault>
-      <faultcode xsi:type = "xsd:string">001</faultcode>
-      <faultstring xsi:type = "xsd:string">
-         Internal system error
-      </faultstring>
-   </soapenv:Fault>
-</soapenv:Envelope>
