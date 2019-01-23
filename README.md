@@ -18,9 +18,9 @@
 
 
 ### Issues so far
-** The API manager is rejecting request for authentication token even if correct token and header key is used, it never validates the token.
+** The API manager is rejecting request for authentication token even if correct token and header key is used, it never validates the token. The API is published and added subscription.
 	
-** The mediators throws unsupported error at runtime when reach to validate. The json schema file was added in repository at _system/config
+** The validate mediator failsT - he mediators throws unsupported operation OMException error at runtime when it reach to validate. The json schema file was added in repository at _system/config
 
 	 <validate>
       <schema key="conf:/getcustomer.json"/>
